@@ -1,0 +1,18 @@
+*csv
+*.zip
+FoCus/
+FoCus_modified/
+checkpoints/
+Research Papers/
+data/
+*.txt
+**/wandb/
+**/t5_grd_knw_grd_persona/
+**/*.err
+**/*.out
+**/*.sh
+**/job*/
+**/*weight*/
+**/__pycache__/
+**/*.ckpt/
+**/lightning_logs/
