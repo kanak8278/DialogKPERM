@@ -23,3 +23,7 @@ show that using responses from K-PERM can
 improve performance in state-of-the-art LLMs
 (GPT 3.5) by 10.5%, highlighting the impact of
 K-PERM for personalizing chatbots.
+
+[FoCus (Call for Customized Conversation: Customized Conversation Grounding Persona and Knowledge)](https://paperswithcode.com/dataset/focus)
+
+[https://github.com/pkchat-focus/FoCus](https://github.com/pkchat-focus/FoCus)
