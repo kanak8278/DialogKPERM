@@ -2,6 +2,8 @@ name: chat_persona
 channels:
   - pytorch
   - conda-forge
+  - huggingface
+  - defaults
 dependencies:
   - python=3.6
   - pip
@@ -12,8 +14,17 @@ dependencies:
   - pytorch=1.6.0
   - torchvision=0.7.0
   - tqdm
+  - pytorch-lightning=1.2.10  # Compatible with Python 3.6
+  - transformers=4.0.0  # Compatible with Python 3.6
+  - torchmetrics=0.2.0  # First version, compatible with Python 3.6
+  - wandb
+  - pandas
   - pip:
     - tensorboard==2.3.0
     - tensorboardx==2.1
     - timm==0.3.1
     - wordcloud
+    - torchtext
+    - rouge
+    - bert-score
+    - nubia-score

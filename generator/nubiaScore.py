@@ -1,3 +1,4 @@
+import argparse
 from nubia_score import Nubia
 from tqdm import tqdm
 import pandas as pd
@@ -32,15 +33,16 @@ def save_results(result_df, parent_path):
     print("Nubia Score:", sum(nubia_s)/len(nubia_s))
 
 if __name__ == '__main__':
-    n = Nubia()
-    paths = ["/work/kanakr/chat_persona/generator/bart_train/predictions/focus_inference_bart_base_20_LM.csv"]
+    parser = argparse.ArgumentParser(description='Compute Nubia Scores for Chatbot Predictions')
+    parser.add_argument('file_path', type=str, help='Path to the CSV file containing chatbot predictions')
+    args = parser.parse_args()
 
-    for path in paths:
-        print("================================================================================================")
-        print(path)
-        df, parent_path = load_data(path)
-        print(df.columns)
-        
-        result_df = compute_nubia_scores(df, n)
-        save_results(result_df, parent_path)
-        print()
+    n = Nubia()
+    print("================================================================================================")
+    print(args.file_path)
+    df, parent_path = load_data(args.file_path)
+    print(df.columns)
+    
+    result_df = compute_nubia_scores(df, n)
+    save_results(result_df, parent_path)
+    print()

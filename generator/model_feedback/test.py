@@ -31,7 +31,7 @@ if __name__ == '__main__':
     args = open('config.json').read()
     args = json.loads(args)
     args = dict2obj(args)
-    checkpoint_path = "/work/kanakr/chat_persona/generator/t5_lightning/neural_qa/saved_weights/checkpoint-epoch=00-val_loss=nan.ckpt"
+    checkpoint_path = "/work/kanakr/chat_persona/generator/model_feedback/saved_weights/checkpoint-epoch=00-val_loss=nan.ckpt"
     device = 'cpu'
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     tokenizer = Tokenizer(args)
